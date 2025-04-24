@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<!-- Highlight.js uchun CSS -->
+@section Styles {
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/vs2015.min.css" />
+}
+
+<!-- Highlight.js uchun JS -->
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+}
+
+<div class="container">
+    <h2>@ViewData["Title"]</h2>
+    <p>This is the privacy policy page.</p>
+
+    <h3>C# Dastur namunasi:</h3>
+
+    <p class="mt-4">
+        <strong>To‘plam o‘zgarmaslar</strong> kuchli alternativ o‘zgarmaslar hisoblanadi.
+        U bir necha nomlangan o‘zgarmaslardan iborat. Faraz qilaylik, bizda bir necha kishining tug‘ilgan yili haqida ma’lumot bor.
+        Dasturda ularni o‘zgarmas sifatida e’lon qilish uchun quyidagicha yozish kerak:
+    </p>
+
+    <!-- Kod bloki 1 -->
+    <pre><code class="language-csharp">
+using System;
+namespace BirinchiLoyiha
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            const double pi = 3.14159265;
+            const double g = 9.81; // Gravitatsiya doimiysi
+            Console.WriteLine("Pi soni: " + pi);
+            Console.WriteLine("Gravitatsiya: " + g);
+            Console.ReadKey();
+        }
+    }
+}
+    </code></pre>
+
+    <p class="mt-4">
+        Har bir to‘plam o‘zgarmasning o‘z turi bo‘ladi. Bu turlar butun sonli turlar (<code>int</code>, <code>short</code>, <code>long</code>,…),
+        <code>char</code> turi bundan mustasno. Bu ko‘rsatilgan tur har bir o‘zgarmas uchun tegishli bo‘ladi. <br />
+        Agar tur ko‘rsatilmagan bo‘lsa, unda <code>int</code> deb qabul qilinadi. Yuqoridagi misolda shunday qilingan.
+        Keyingi misolda esa har bir o’zgaruvchining turi <code>ulong</code> deb qabul qiladi:
+    </p>
+
+    <!-- Kod bloki 2 -->
+    <pre><code class="language-csharp">
+using System;
+namespace BirinchiLoyiha
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            const double pi = 3.14159265;
+            const double g = 9.81; // Gravitatsiya doimiysi
+            Console.WriteLine("Pi soni: " + pi);
+            Console.WriteLine("Gravitatsiya: " + g);
+            int qani = 34;
+            Console.ReadKey();
+        }
+    }
+}
+    </code></pre>
+</div>

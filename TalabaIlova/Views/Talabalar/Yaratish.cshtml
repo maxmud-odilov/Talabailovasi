@@ -1,0 +1,34 @@
+﻿@model TalabaIlova.Models.Talaba
+
+@{
+    ViewData["Title"] = "Yangi Talaba Qo‘shish";
+}
+
+<h2 class="fw-bold mb-4 text-success">👨‍🎓 Yangi Talaba Qo‘shish</h2>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <form asp-action="Yaratish">
+            <div class="mb-3">
+                <label asp-for="Ism" class="form-label">Ism</label>
+                <input asp-for="Ism" class="form-control" placeholder="Masalan, Ali" />
+                <span asp-validation-for="Ism" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Familiya" class="form-label">Familiya</label>
+                <input asp-for="Familiya" class="form-control" placeholder="Masalan, Karimov" />
+                <span asp-validation-for="Familiya" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Yosh" class="form-label">Yosh</label>
+                <input asp-for="Yosh" class="form-control" type="number" min="15" max="100" placeholder="Masalan, 20" />
+                <span asp-validation-for="Yosh" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success">💾 Saqlash</button>
+            <a asp-action="Index" class="btn btn-secondary ms-2">⬅️ Orqaga</a>
+        </form>
+    </div>
+</div>
