@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: TalabaIlova
+    env: dotnet
+    buildCommand: dotnet build
+    startCommand: dotnet TalabaIlova.dll
+    branch: master
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
